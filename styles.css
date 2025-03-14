@@ -10,17 +10,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-
-  font-family: "Caveat", cursive;
+  font-family: monospace;
 }
-
-.caveat-font {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 /* Fitting the video into the background */
 #backgroundVideo {
@@ -148,7 +139,7 @@ body {
   border-radius: 5px;
   background: #2a2a2a;
   color: #ffffff;
-  font-family: "Caveat", cursive;
+  font-family: monospace;
 }
 
 .container button {
@@ -159,7 +150,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "Caveat", cursive;
+  font-family: monospace;
 }
 
 .container button:hover {
