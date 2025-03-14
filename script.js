@@ -37,8 +37,6 @@ setInterval(updateClock, 1000);
 updateClock();
 
 let users = [];
-
-// I took some help from ChatGpt in here.
 document.getElementById("loginBtn").addEventListener("click", function() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
