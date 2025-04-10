@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {}
+    "C:\\Users\\Batuhan\\Desktop\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {
+    "C:\\Users\\Batuhan\\Desktop\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
+        "projectUniqueName": "C:\\Users\\Batuhan\\Desktop\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
         "projectName": "labworkWeek5",
-        "projectPath": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
+        "projectPath": "C:\\Users\\Batuhan\\Desktop\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
         "packagesPath": "C:\\Users\\Batuhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\obj\\",
+        "outputPath": "C:\\Users\\Batuhan\\Desktop\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Batuhan\\AppData\\Roaming\\NuGet\\NuGet.Config"
