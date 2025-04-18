@@ -194,3 +194,4 @@ C:\Users\Batuhan\Desktop\Codes\Ceng382_25-26_c2138006\labworkWeek5\obj\Debug\net
 C:\Users\Batuhan\Desktop\Codes\Ceng382_25-26_c2138006\labworkWeek5\obj\Debug\net9.0\labworkWeek5.pdb
 C:\Users\Batuhan\Desktop\Codes\Ceng382_25-26_c2138006\labworkWeek5\obj\Debug\net9.0\labworkWeek5.genruntimeconfig.cache
 C:\Users\Batuhan\Desktop\Codes\Ceng382_25-26_c2138006\labworkWeek5\obj\Debug\net9.0\ref\labworkWeek5.dll
+C:\Users\Batuhan\Desktop\Ceng382_25-26_c2138006\labworkWeek5\obj\Debug\net9.0\compressed\r0k1lqi7ue-ecme0me077.gz
