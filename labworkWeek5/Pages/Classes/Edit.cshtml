@@ -1,0 +1,28 @@
+@page
+@model labworkWeek5.Pages.Classes.EditModel
+@{
+    ViewData["Title"] = "Edit Class";
+}
+
+<h2>Edit Class</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Class.Id" />
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" asp-for="Class.Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="PersonCount">Person Count</label>
+        <input type="number" asp-for="Class.PersonCount" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea asp-for="Class.Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="IsActive">Is Active</label>
+        <input type="checkbox" asp-for="Class.IsActive" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

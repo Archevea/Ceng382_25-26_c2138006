@@ -1,7 +1,10 @@
+using labworkWeek5.Data;  // SchoolDbContext burada yer almalı
+using labworkWeek5.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using labworkWeek5.Data;
-using labworkWeek5.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace labworkWeek5.Pages.Classes
 {
@@ -14,11 +17,11 @@ namespace labworkWeek5.Pages.Classes
             _context = context;
         }
 
-        public IList<Class> ClassList { get; set; }
+        public IList<Class> Classes { get; set; }
 
         public async Task OnGetAsync()
         {
-            ClassList = await _context.Classes.ToListAsync();
+            Classes = await _context.Classes.ToListAsync();
         }
     }
 }
