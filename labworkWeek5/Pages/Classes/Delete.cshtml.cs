@@ -1,4 +1,4 @@
-using labworkWeek5.Data;  // SchoolDbContext burada yer almalı
+using labworkWeek5.Data;
 using labworkWeek5.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
