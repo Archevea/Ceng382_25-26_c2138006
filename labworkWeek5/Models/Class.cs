@@ -8,14 +8,16 @@ namespace labworkWeek5.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required]
         public int PersonCount { get; set; }
 
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         [Required]
         public bool IsActive { get; set; }
+
+        public bool IsDeleted { get; set; } = false;
     }
 }

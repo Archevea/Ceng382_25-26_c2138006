@@ -1,9 +1,8 @@
-using labworkWeek5.Data;
-using labworkWeek5.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+using labworkWeek5.Models;
+using labworkWeek5.Data;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace labworkWeek5.Pages.Classes
 {
@@ -21,7 +20,8 @@ namespace labworkWeek5.Pages.Classes
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            Class = await _context.Classes.FindAsync(id);
+            Class = await _context.Classes
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (Class == null)
             {
@@ -31,15 +31,16 @@ namespace labworkWeek5.Pages.Classes
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int id)
         {
-            if (Class == null)
-            {
-                return NotFound();
-            }
+            Class = await _context.Classes.FindAsync(id);
 
-            _context.Classes.Remove(Class);
-            await _context.SaveChangesAsync();
+            if (Class != null)
+            {
+                Class.IsDeleted = true;
+
+                await _context.SaveChangesAsync();
+            }
 
             return RedirectToPage("./Index");
         }

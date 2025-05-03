@@ -4,22 +4,148 @@
     ViewData["Title"] = "Class Details";
 }
 
-<h2>Class Details</h2>
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1 class="dashboard-title">Class Details</h1>
+        </div>
+    </header>
 
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">Name</dt>
-        <dd class="col-sm-10">@Model.Class.Name</dd>
+    <div class="dashboard-content">
+        <div class="content-card">
+            <div class="card-header">
+                <i class="bi bi-info-circle"></i> Class Information
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Name</dt>
+                    <dd class="col-sm-9">@Model.Class.Name</dd>
 
-        <dt class="col-sm-2">Person Count</dt>
-        <dd class="col-sm-10">@Model.Class.PersonCount</dd>
+                    <dt class="col-sm-3">Person Count</dt>
+                    <dd class="col-sm-9">@Model.Class.PersonCount</dd>
 
-        <dt class="col-sm-2">Description</dt>
-        <dd class="col-sm-10">@Model.Class.Description</dd>
+                    <dt class="col-sm-3">Description</dt>
+                    <dd class="col-sm-9">@Model.Class.Description</dd>
 
-        <dt class="col-sm-2">Is Active</dt>
-        <dd class="col-sm-10">@Model.Class.IsActive</dd>
-    </dl>
+                    <dt class="col-sm-3">Status</dt>
+                    <dd class="col-sm-9">
+                        @if (Model.Class.IsActive)
+                        {
+                            <span class="status-badge status-active">Active</span>
+                        }
+                        else
+                        {
+                            <span class="status-badge status-inactive">Inactive</span>
+                        }
+                    </dd>
+                </dl>
+
+                <a href="@Url.Page("./Index")" class="btn btn-secondary mt-3">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<a href="@Url.Page("./Index")" class="btn btn-secondary">Back to List</a>
+<style>
+    .dashboard-container {
+        padding-top: 80px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .dashboard-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #0062cc, #0069d9);
+        color: white;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .dashboard-content {
+        padding: 2rem;
+    }
+
+    .content-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+    }
+
+    .card-header {
+        background-color: #343a40;
+        color: white;
+        padding: 1rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 8px 8px 0 0;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+
+    .row dt {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .row dd {
+        margin-bottom: 1rem;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 0.35rem 0.65rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 50px;
+    }
+
+    .status-active {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .status-inactive {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        color: white;
+    }
+</style>
