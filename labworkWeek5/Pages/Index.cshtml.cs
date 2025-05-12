@@ -1,24 +1,14 @@
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace labworkWeek5.Pages
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            if (HttpContext.Session.GetString("username") == null)
-            {
-                return RedirectToPage("/Login");
-            }
 
-            return Page();
-        }
-
-        public IActionResult OnPostLogout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToPage("/Login");
         }
     }
 }

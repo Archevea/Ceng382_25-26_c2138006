@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {}
+    "C:\\Users\\Batuhan\\Documents\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {
+    "C:\\Users\\Batuhan\\Documents\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
+        "projectUniqueName": "C:\\Users\\Batuhan\\Documents\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
         "projectName": "labworkWeek5",
-        "projectPath": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
+        "projectPath": "C:\\Users\\Batuhan\\Documents\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\labworkWeek5.csproj",
         "packagesPath": "C:\\Users\\Batuhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batuhan\\Desktop\\Ceng382_25-26_c2138006\\labworkWeek5\\obj\\",
+        "outputPath": "C:\\Users\\Batuhan\\Documents\\Codes\\Ceng382_25-26_c2138006\\labworkWeek5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Batuhan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,9 +44,33 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -68,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

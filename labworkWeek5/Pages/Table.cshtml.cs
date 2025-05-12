@@ -1,14 +1,16 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using labworkWeek5.Models;
 using labworkWeek5.Helpers;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Linq;
 
 namespace labworkWeek5.Pages
 {
+    [Authorize]
     public class TableModel : PageModel
     {
         public static List<ClassInformationModel> Classes { get; set; } = new List<ClassInformationModel>();
@@ -35,11 +37,6 @@ namespace labworkWeek5.Pages
         {
             string[] classNames = { "MIS", "CENG", "SENG", "MAN" };
             string[] descriptions = { "Management Information Systems", "Computer Engineering", "Software Engineering", "Management" };
-
-            if (!IsUserAuthenticated())
-            {
-                return RedirectToPage("/Login");
-            }
 
             if (!Classes.Any())
             {
@@ -90,19 +87,6 @@ namespace labworkWeek5.Pages
             FilteredClasses = paginated;
 
             return Page();
-        }
-
-        private bool IsUserAuthenticated()
-        {
-            var sessionToken = HttpContext.Session.GetString("token");
-            var cookieToken = Request.Cookies["AuthToken"];
-            return sessionToken == cookieToken && !string.IsNullOrEmpty(sessionToken);
-        }
-
-        public IActionResult OnPostLogout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToPage("/Login");
         }
 
         public IActionResult OnGetEdit(int id)
@@ -181,7 +165,7 @@ namespace labworkWeek5.Pages
 
             string json = Utils.Instance.SerializeToJson(exportData, columnList);
 
-            return File(System.Text.Encoding.UTF8.GetBytes(json), "application/json", "export.json");
+            return File(Encoding.UTF8.GetBytes(json), "application/json", "export.json");
         }
 
         public List<object> GetPaginationPages()

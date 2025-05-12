@@ -1,6 +1,6 @@
 using labworkWeek5.Data;
 using labworkWeek5.Models;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System;
 
 namespace labworkWeek5.Pages.Classes
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly SchoolDbContext _context;
@@ -63,12 +64,6 @@ namespace labworkWeek5.Pages.Classes
             }
 
             return pages;
-        }
-
-        public IActionResult OnPostLogout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToPage("/Login");
         }
     }
 }
